@@ -1,0 +1,80 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[19]:
+
+
+import pandas as pd
+record = '''
+          {
+              "0":{
+                  "Identity": "Sam",
+                  "Age": "19"
+              },
+              "1":{
+                  "Identity": "Tom",
+                  "Age": "14"
+              },
+              "2":{
+                  "Identity": "Mac",
+                  "Age":"11"
+              }
+          }
+    '''
+
+df = pd.read_json(record, orient ='index')
+print(df)
+
+
+# In[26]:
+
+
+import pandas as pd
+df = pd.read_json('sample.json')
+
+
+# In[25]:
+
+
+import pandas as pd
+
+df = pd.read_json('sample.Json')
+
+print(df.to_string())
+
+
+# In[21]:
+
+
+import json
+import pandas as pd
+
+
+# In[35]:
+
+
+pd.read_json('sample.json')
+
+
+# In[44]:
+
+
+df2 = pd.read_json('sample.json', orient ='index=1')
+print(df2)
+
+
+# In[47]:
+
+
+df = pd.read_json("sample.json")
+
+bn=pd.DataFrame(df)['people']
+
+pd.json_normalize(bn).head()
+
+
+# In[ ]:
+
+
+
+
